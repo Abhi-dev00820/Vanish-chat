@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vanish Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="chat-container">
+    <!-- Header -->
+    <div class="chat-header">
+      <span>🎮 Vanish Chat</span>
+      <button id="theme-toggle" title="Toggle Theme">🌞</button>
+    </div>
+
+    <!-- Username Entry -->
+    <div id="username-entry" class="username-entry">
+      <input type="text" id="username" placeholder="Enter a nickname to start chatting..." />
+      <button id="start-chat">Start Chat</button>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chat-box" class="chat-box hidden">
+      <ul id="messages"></ul>
+
+      <form id="form" autocomplete="off">
+        <!-- Text Input -->
+        <input id="input" type="text" placeholder="Type a message..." />
+
+        <!-- Image Upload -->
+        <label for="image-upload" id="upload-label" title="Upload image">📷</label>
+        <input type="file" id="image-upload" accept="image/*" hidden />
+
+        <!-- Submit Button -->
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
